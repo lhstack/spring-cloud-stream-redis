@@ -1,0 +1,8 @@
+singleServerConfig:
+  address: redis://192.168.101.150:6379
+  subscriptionConnectionMinimumIdleSize: 1
+  subscriptionConnectionPoolSize: 8
+  connectionMinimumIdleSize: 1
+  connectionPoolSize: 8
+  database: 1
+  password: 123456

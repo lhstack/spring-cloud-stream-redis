@@ -1,0 +1,37 @@
+spring:
+  cloud:
+    stream:
+      redis:
+        #bindings: #自定义扩展配置
+        #  input:
+        #    producer:
+        #      channel: test
+        #    consumer:
+        #      consumer: test
+        #  output:
+        #    producer:
+        #      channel: out
+        #    consumer:
+        #      consumer: out
+        binder:
+          uri: redis://10.51.100.42:6379
+          password: 123456
+          database: 1
+      bindings:
+#        input1:
+#          contentType: text/plain
+#          destination: text-plain
+#        output1:
+#          contentType: text/plain
+#          destination: text-plain
+        input:
+          contentType: application/json
+          destination: octet-stream
+        input1:
+          contentType: application/octet-stream
+          destination: octet-stream
+        output:
+          contentType: application/json
+          destination: octet-stream
+  application:
+    name: redis

@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    stream:
+      redis:
+        #bindings: #自定义扩展配置
+        #  input:
+        #    producer:
+        #      channel: test
+        #    consumer:
+        #      channel: test
+        #  output:
+        #    producer:
+        #      channel: out
+        #    consumer:
+        #      channel: out
+        binder:
+          database: 0
+          host: 192.168.101.5
+          password: 123456
+          port: 6379
+      bindings:
+        input1:
+          contentType: text/plain
+          destination: text-plain
+        output1:
+          contentType: text/plain
+          destination: text-plain
+        input:
+          contentType: application/octet-stream
+          destination: octet-stream
+        output:
+          contentType: application/octet-stream
+          destination: octet-stream

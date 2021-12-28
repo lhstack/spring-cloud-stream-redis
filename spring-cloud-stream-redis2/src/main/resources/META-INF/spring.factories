@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.lhstack.stream.redis.RedisStreamAutoConfiguration

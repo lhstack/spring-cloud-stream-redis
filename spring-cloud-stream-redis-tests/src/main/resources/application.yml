@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        BYTE_STREAM_OUT_PUT:
+          destination: BYTE-STREAM
+          contentType: application/octet-stream
+        BYTE_STREAM_IN_PUT:
+          destination: BYTE-STREAM
+          contentType: application/octet-stream
+        JSON_STREAM_OUT_PUT:
+          destination: JSON-STREAM #通道地址,默认contentType是json
+        JSON_STREAM_IN_PUT:
+          destination: JSON-STREAM
+        TEXT_STREAM_OUT_PUT:
+          destination: TEXT-STREAM
+          contentType: text/plain
+        TEXT_STREAM_IN_PUT:
+          destination: TEXT-STREAM
+          contentType: text/plain
+      redis:
+        binder:
+          host: 192.168.101.150
+          password: 123456
+          database: 1
+          port: 6379
+server:
+  port: 8080
